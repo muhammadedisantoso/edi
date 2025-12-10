@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Muhammad Edi Santoso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGASI -->
+    <nav>
+        <h2>EdiPortofolio</h2>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- BERANDA - SECTION BARU -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Halo, Saya <span class="hero-highlight">Muhammad Edi Santoso</span></h1>
+                <p>Calon <span class="hero-highlight">Software Engineer</span> yang passionate dalam menciptakan solusi teknologi inovatif melalui pengembangan web dan pemrograman. Saya terus belajar dan mengembangkan skill untuk menghadapi tantangan dunia digital.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" class="cta-btn primary-btn">
+                        <i class="fas fa-code"></i> Lihat Project Saya
+                    </a>
+                    <a href="#contact" class="cta-btn secondary-btn">
+                        <i class="fas fa-envelope"></i> Hubungi Saya
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Project Selesai</p>
+                    </div>
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Tahun Belajar</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Dedikasi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-shapes">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="code-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="c:\Users\LAB_RPL\Downloads\WhatsApp Image 2025-11-23 at 23.45.31.jpeg" alt="Foto Edi">
+            </div>
+            <div class="about-text">
+                <h3>Siapa Saya?</h3>
+                <p>
+                    Saya <strong>MUHAMMAD EDI SANTOSO</strong>, seorang pelajar IT yang sedang mendalami dunia teknologi,
+                    khususnya dalam bidang pengembangan web dan pemrograman. Ketertarikan saya pada teknologi bermula
+                    dari keinginan untuk menciptakan sistem yang bermanfaat dan dapat mempermudah pekerjaan manusia.
+                    <br><br>
+                    Sebagai siswa Rekayasa Perangkat Lunak, saya terus belajar dan mengembangkan kemampuan dalam <strong>HTML,
+                    CSS, JavaScript, PHP</strong>, serta pemrograman berbasis mikrokontroler seperti <strong>Arduino</strong>. Saya juga tertarik
+                    dalam membangun antarmuka yang modern, interaktif, dan ramah pengguna.
+                    <br><br>
+                    Tekad saya adalah menjadi seorang <strong>software engineer</strong> yang mampu mengimplementasikan solusi nyata untuk permasalahan dunia nyata.
+                </p>
+                <button onclick="openPopup()" class="feature-btn">
+                    <i class="fas fa-star"></i> Fitur Menarik
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skills" class="section skills-section">
+        <h2 class="section-title">Skill & Keahlian</h2>
+        <div class="skills">
+            <div class="skill-item" onclick="showSkillInfo('html')">
+                <i class="fab fa-html5"></i> HTML
+            </div>
+            <div class="skill-item" onclick="showSkillInfo('css')">
+                <i class="fab fa-css3-alt"></i> CSS
+            </div>
+            <div class="skill-item" onclick="showSkillInfo('js')">
+                <i class="fab fa-js-square"></i> JavaScript
+            </div>
+            <div class="skill-item" onclick="showSkillInfo('php')">
+                <i class="fab fa-php"></i> PHP
+            </div>
+            <div class="skill-item" onclick="showSkillInfo('arduino')">
+                <i class="fas fa-microchip"></i> Arduino
+            </div>
+        </div>
+
+        <!-- Popup Skill -->
+        <div class="popup-overlay" id="skillPopup">
+            <div class="popup-box">
+                <h2 id="skillTitle"></h2>
+                <p id="skillDesc"></p>
+                <button class="close-btn" onclick="closeSkillPopup()">Tutup</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section id="projects" class="projects-container">
+        <h2 class="section-title">Project Saya</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="c:\Users\LAB_RPL\Downloads\images\pkk2.jpeg" class="project-img" alt="Robot Avoider">
+                </div>
+                <div class="project-content">
+                    <h3>Robot Avoider</h3>
+                    <p>Robot avoider adalah robot mobil yang menggunakan Arduino untuk menjalankan robot tersebut dan sensor untuk membelokan atau menghindari terjadinya tertabrak material/benda di depannya.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Sensor</span>
+                        <span class="tech-tag">Robotika</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="c:\Users\LAB_RPL\Downloads\images\pkkl5.jpeg" class="project-img" alt="Smarthome Device">
+                </div>
+                <div class="project-content">
+                    <h3>Smart Home Device</h3>
+                    <p>Perangkat elektronik yang bisa bekerja secara otomatis dan dapat dikontrol melalui teknologi Internet of Things (IoT) untuk meningkatkan kenyamanan dan keamanan rumah.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">Sensor</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="project-img" alt="Portfolio Website">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Website portfolio interaktif dengan desain modern, animasi, dan fitur responsif untuk menampilkan karya dan kemampuan dalam pengembangan web.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="contact" class="contact-section">
+        <h2 class="contact-title">Hubungi Saya</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item" onclick="openContact('email', 'm.edisantoso@example.com')">
+                    <div class="contact-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>muhammadedisantoso@gmail.com</p>
+                        <small>Klik untuk mengirim email</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item" onclick="openContact('phone', '+6281234567890')">
+                    <div class="contact-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">
+                    </div>
+                    <div class="contact-details">
+                        <h4>Telepon</h4>
+                        <p>+62 856-4874-5609</p>
+                        <small>Klik untuk menghubungi</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item" onclick="openContact('instagram', 'iki_edd')">
+                    <div class="contact-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                    </div>
+                    <div class="contact-details">
+                        <h4>Instagram</h4>
+                        <p>@iki_edd</p>
+                        <small>Klik untuk mengunjungi</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item" onclick="openContact('github', 'muhammadedisantoso')">
+                    <div class="contact-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                    </div>
+                    <div class="contact-details">
+                        <h4>GitHub</h4>
+                        <p>github.com/muhammadedisantoso</p>
+                        <small>Klik untuk melihat repositori</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/684/684809.png" alt="Location">
+                    </div>
+                    <div class="contact-details">
+                        <h4>Lokasi</h4>
+                        <p>kab lumajang, Jawa Timur, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="maps-container">
+                <h3>Lokasi Saya</h3>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126390.9157511803!2d113.14986964952412!3d-8.130357103859108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd65dab51496717%3A0x31d756cd65c75b98!2sLumajang%2C%20Lumajang%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1765378654953!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Muhammad Edi Santoso. Semua hak dilindungi.</p>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- POPUP FITUR MENARIK -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+            <h2>Fitur Teknologi Portfolio</h2>
+            <p>Website ini menggunakan teknologi modern seperti:</p>
+            <ul>
+                <li>Efek animasi CSS3 untuk pengalaman visual yang menarik</li>
+                <li>Popup interaktif dengan JavaScript</li>
+                <li>Desain responsif yang dapat menyesuaikan dengan berbagai perangkat</li>
+                <li>Gradient dan efek visual futuristik</li>
+                <li>Integrasi dengan Google Maps API</li>
+            </ul>
+            <button class="close-btn" onclick="closePopup()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- LINK JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
